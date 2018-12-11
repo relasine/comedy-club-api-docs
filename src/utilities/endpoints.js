@@ -28,7 +28,7 @@ export const cityEndpoints = [
       "an object with city (string), state (string), primary_airport (string), population (number), and tourism_website (string) key/value pairs.",
     successStatus: 201,
     returns:
-      "fetches an object with a key/value pair of 'id' and the id number",
+      "posts a new city and returns an object with a key/value pair of 'id' and the id number",
     failureStatus: 422
   },
   {
@@ -37,7 +37,8 @@ export const cityEndpoints = [
     params: "city id (number)",
     body: "an object with a tourism_website (string) key/value pair",
     successStatus: 204,
-    returns: "fetches the number of rows affected by the patch (1)",
+    returns:
+      "updates a city's tourism website and returns the number of rows affected by the patch (1)",
     failureStatus: 415,
     failureMessage: "<error message>"
   },
@@ -47,7 +48,7 @@ export const cityEndpoints = [
     params: "city id (number)",
     body: "N/A",
     successStatus: 202,
-    returns: "fetches the id number of the city",
+    returns: "deletes a city and returns the id number of the city",
     failureStatus: "N/A",
     failureMessage: "N/A"
   }
@@ -91,7 +92,7 @@ export const comedyClubEndpoints = [
     body:
       "an object with name (string), street_address (string), zip_code (number), and rating (number) key/value pairs",
     successStatus: 201,
-    returns: "fetches the entire body object",
+    returns: "posts a new comedy club and returns the entire body object",
     failureStatus: 422,
     failureMessage: "<error message>"
   },
@@ -101,7 +102,8 @@ export const comedyClubEndpoints = [
     params: "comedy club id (number)",
     body: "on object with the rating (number) key/value pair",
     successStatus: 204,
-    returns: "fetches the id of the created club",
+    returns:
+      "updates a comedy club's rating and returns the id of the created club",
     failureStatus: 415,
     failureMessage: "<error message>"
   },
@@ -111,7 +113,8 @@ export const comedyClubEndpoints = [
     params: "city id (number), comedy club id (number)",
     body: "N/A",
     successStatus: 202,
-    returns: "fetches the id number of the comedy club",
+    returns:
+      "deletes a comedy club and returns the id number of the comedy club",
     failureStatus: "N/A",
     failureMessage: "N/A"
   }
