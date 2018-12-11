@@ -1,4 +1,19 @@
-.instructions p {
+.instructions {
+  display: flex;
+  margin: 3rem auto;
   max-width: 700px;
+}
+
+.instructions p {
+  max-width: 500px;
   margin: auto;
+}
+
+.right-pane {
+  background: url("./images/mic.svg");
+  background-size: 300px 200px;
+  background-repeat: no-repeat;
+  background-position-x: 25px;
+  height: 200px;
+  width: 200px;
 }
