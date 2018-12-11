@@ -7,14 +7,34 @@ class Pane extends Component {
     super();
 
     this.state = {
-      deployed: false
+      deployed: false,
+      modalStatus: false
     };
   }
 
-  handleClick = () => {
+  handleClick = e => {
+    if (e.target.innerText === "show example" || this.props.modalDeployed) {
+      return;
+    }
     this.setState({
-      deployed: !this.state.deployed
+      deployed: !this.state.deployed,
+      modalStatus: false
     });
+  };
+
+  openModal = () => {
+    console.log(this.props.modalDeployed);
+    this.setState({
+      modalStatus: true
+    });
+    this.props.openModal();
+  };
+
+  closeModal = () => {
+    this.setState({
+      modalStatus: false
+    });
+    this.props.closeModal();
   };
 
   render() {
@@ -56,8 +76,13 @@ class Pane extends Component {
             <span className="secondary-label">Error message:</span>{" "}
             {failureMessage}
           </p>
+          <button onClick={this.openModal}>show example</button>
         </section>
-        <ExampleModal data={example} />
+        <ExampleModal
+          data={example}
+          closeModal={this.closeModal}
+          showStatus={this.state.modalStatus}
+        />
       </article>
     );
   }

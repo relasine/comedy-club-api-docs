@@ -3,13 +3,13 @@
   margin: 1rem auto;
   background: #e7f0f7;
   font-size: 0.8rem;
-  border: 1px solid #0f6ab4;
+  border: 1px solid #;
+  position: relative;
 }
 
 .pane:hover {
   cursor: pointer;
 }
-
 .main-pane {
   display: flex;
 }
@@ -52,5 +52,13 @@
 }
 
 .secondary-pane.true {
-  height: 210px;
+  height: 270px;
+}
+
+.secondary-pane button {
+  width: 200px;
+  margin: 0.5rem auto;
+  background: #0f6ab4;
+  font-weight: 700;
+  border: none;
 }

@@ -30,14 +30,14 @@ export const deleteCity = {
 
 export const getClubs = {
   exampleUrl: "GET: /api/v1/comedy_clubs",
-  body: "./body-examples/get-club.png",
+  body: "./body-examples/n-a.png",
   exampleResponse: "./response-ss/get-clubs.png"
 };
 
 export const getSpecificClub = {
   exampleUrl: "GET: /api/v1/comedy_clubs/2",
   body: "./body-examples/n-a.png",
-  exampleResposne: "./respons-ss/get-specific-club.png"
+  exampleResponse: "./response-ss/get-specific-club.png"
 };
 
 export const getComedyClubsByCity = {

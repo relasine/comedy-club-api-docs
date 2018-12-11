@@ -103,7 +103,7 @@ export const comedyClubEndpoints = [
     params: "city id (number)",
     body: "N/A",
     successStatus: 201,
-    returns: "fetches an array of comedy club objects",
+    returns: "fetches an array of comedy club objects with a specific city id",
     failureStatus: 422,
     failureMessage: "<error message>",
     example: getComedyClubsByCity

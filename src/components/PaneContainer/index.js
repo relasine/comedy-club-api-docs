@@ -7,18 +7,53 @@ import {
 } from "../../utilities/endpoints.js";
 
 class PaneContainer extends Component {
+  constructor() {
+    super();
+
+    this.state = {
+      deployed: null
+    };
+  }
+
+  handleModal = modal => {
+    this.setState({
+      deployed: modal
+    });
+  };
+
+  closeModals = () => {
+    this.setState({
+      deployed: null
+    });
+  };
   render() {
     let key = 0;
 
     const cityEndpointsContainer = cityEndpoints.map(endpoint => {
       key++;
-      return <Pane key={key} data={endpoint} />;
+      return (
+        <Pane
+          openModal={this.props.openModal}
+          closeModal={this.props.closeModal}
+          modalDeployed={this.props.modalDeployed}
+          key={key}
+          data={endpoint}
+        />
+      );
     });
 
     const clubsEndpointsContainer = comedyClubEndpoints.map(endpoint => {
       key++;
 
-      return <Pane key={key} data={endpoint} />;
+      return (
+        <Pane
+          openModal={this.props.openModal}
+          closeModal={this.props.closeModal}
+          modalDeployed={this.props.modalDeployed}
+          key={key}
+          data={endpoint}
+        />
+      );
     });
     return (
       <main className="pane_container">

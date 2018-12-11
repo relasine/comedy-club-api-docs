@@ -3,11 +3,16 @@ import "../../styles/ExampleModal.css";
 
 class ExampleModal extends Component {
   render() {
+    const { data, showStatus, closeModal } = this.props;
+
     return (
-      <aside className="example-modal">
-        <h4>Example Endpoint: {this.props.data.exampleUrl}</h4>
-        <img src={this.props.data.body} alt="body-example" />
-        <img src={this.props.data.exampleResponse} alt="example-response" />
+      <aside className={`example-modal ${showStatus}`}>
+        <button onClick={closeModal}>close</button>
+        <h4>Example Endpoint: {data.exampleUrl}</h4>
+        <h4>Example Body Object:</h4>
+        <img src={data.body} alt="body-example" />
+        <h4>Example Response Object</h4>
+        <img src={data.exampleResponse} alt="example-response" />
         <div />
       </aside>
     );
