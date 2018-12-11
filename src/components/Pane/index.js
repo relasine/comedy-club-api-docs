@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import ExampleModal from "../ExampleModal";
 import "../../styles/Pane.css";
 
 class Pane extends Component {
@@ -25,7 +26,8 @@ class Pane extends Component {
       successStatus,
       returns,
       failureStatus,
-      failureMessage
+      failureMessage,
+      example
     } = this.props.data;
 
     return (
@@ -55,6 +57,7 @@ class Pane extends Component {
             {failureMessage}
           </p>
         </section>
+        <ExampleModal data={example} />
       </article>
     );
   }
