@@ -3,6 +3,7 @@
   margin: 1rem auto;
   background: #e7f0f7;
   font-size: 0.8rem;
+  border: 1px solid #0f6ab4;
 }
 
 .pane:hover {
@@ -51,5 +52,5 @@
 }
 
 .secondary-pane.true {
-  height: 166px;
+  height: 210px;
 }
