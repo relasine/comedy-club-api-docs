@@ -1,3 +1,17 @@
+const {
+  getCities,
+  getSpecificCity,
+  postCity,
+  patchCityWebsite,
+  deleteCity,
+  getClubs,
+  getSpecificClub,
+  getComedyClubsByCity,
+  postClub,
+  patchClubRating,
+  deleteClub
+} = require("./fetches.js");
+
 export const cityEndpoints = [
   {
     type: "GET",
@@ -7,7 +21,8 @@ export const cityEndpoints = [
     successStatus: 200,
     returns: "fetches an array of city objects",
     failureStatus: 422,
-    failureMessage: "<error message>"
+    failureMessage: "<error message>",
+    example: getCities
   },
   {
     type: "GET",
@@ -18,7 +33,8 @@ export const cityEndpoints = [
     returns:
       "fetches an array with a specific city object matching the id parameter",
     failureStatus: "N/A",
-    failureMessage: "N/A"
+    failureMessage: "N/A",
+    example: getSpecificCity
   },
   {
     type: "POST",
@@ -29,7 +45,9 @@ export const cityEndpoints = [
     successStatus: 201,
     returns:
       "posts a new city and returns an object with a key/value pair of 'id' and the id number",
-    failureStatus: 422
+    failureStatus: 422,
+    failureMessage: "unprocessable entity",
+    example: postCity
   },
   {
     type: "PATCH",
@@ -40,7 +58,8 @@ export const cityEndpoints = [
     returns:
       "updates a city's tourism website and returns the number of rows affected by the patch (1)",
     failureStatus: 415,
-    failureMessage: "<error message>"
+    failureMessage: "<error message>",
+    example: patchCityWebsite
   },
   {
     type: "DELETE",
@@ -50,7 +69,8 @@ export const cityEndpoints = [
     successStatus: 202,
     returns: "deletes a city and returns the id number of the city",
     failureStatus: "N/A",
-    failureMessage: "N/A"
+    failureMessage: "N/A",
+    example: deleteCity
   }
 ];
 
@@ -63,7 +83,8 @@ export const comedyClubEndpoints = [
     successStatus: 200,
     returns: "fetches an array of all comedy club objects",
     failureStatus: "N/A",
-    failureMessage: "N/A"
+    failureMessage: "N/A",
+    example: getClubs
   },
   {
     type: "GET",
@@ -73,7 +94,8 @@ export const comedyClubEndpoints = [
     successStatus: 200,
     returns: "fetches an array with a specific comedy club object",
     failureStatus: 415,
-    failureMessage: "<error message>"
+    failureMessage: "<error message>",
+    example: getSpecificClub
   },
   {
     type: "GET",
@@ -83,7 +105,8 @@ export const comedyClubEndpoints = [
     successStatus: 201,
     returns: "fetches an array of comedy club objects",
     failureStatus: 422,
-    failureMessage: "<error message>"
+    failureMessage: "<error message>",
+    example: getComedyClubsByCity
   },
   {
     type: "POST",
@@ -94,7 +117,8 @@ export const comedyClubEndpoints = [
     successStatus: 201,
     returns: "posts a new comedy club and returns the entire body object",
     failureStatus: 422,
-    failureMessage: "<error message>"
+    failureMessage: "<error message>",
+    example: postClub
   },
   {
     type: "PATCH",
@@ -105,7 +129,8 @@ export const comedyClubEndpoints = [
     returns:
       "updates a comedy club's rating and returns the id of the created club",
     failureStatus: 415,
-    failureMessage: "<error message>"
+    failureMessage: "<error message>",
+    example: patchClubRating
   },
   {
     type: "DELETE",
@@ -116,6 +141,7 @@ export const comedyClubEndpoints = [
     returns:
       "deletes a comedy club and returns the id number of the comedy club",
     failureStatus: "N/A",
-    failureMessage: "N/A"
+    failureMessage: "N/A",
+    example: deleteClub
   }
 ];
