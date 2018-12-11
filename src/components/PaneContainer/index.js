@@ -8,12 +8,17 @@ import {
 
 class PaneContainer extends Component {
   render() {
+    let key = 0;
+
     const cityEndpointsContainer = cityEndpoints.map(endpoint => {
-      return <Pane key={endpoint.city} data={endpoint} />;
+      key++;
+      return <Pane key={key} data={endpoint} />;
     });
 
     const clubsEndpointsContainer = comedyClubEndpoints.map(endpoint => {
-      return <Pane key={endpoint.name} data={endpoint} />;
+      key++;
+
+      return <Pane key={key} data={endpoint} />;
     });
     return (
       <main className="pane_container">

@@ -1,3 +1,36 @@
 .pane {
+  max-width: 1000px;
+  margin: auto;
+}
+
+.pane:hover {
+  cursor: pointer;
+}
+
+.main-pane {
   display: flex;
+}
+
+.type {
+  width: 100px;
+  font-weight: 800;
+}
+
+.returns {
+  margin-left: auto;
+  font-style: italic;
+}
+
+.secondary-label {
+  font-weight: 700;
+}
+
+.secondary-pane {
+  transition: 0.3s;
+  overflow: hidden;
+  height: 0px;
+}
+
+.secondary-pane.true {
+  height: 200px;
 }
