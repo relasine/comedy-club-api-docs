@@ -10,7 +10,7 @@ class Instructions extends Component {
           <p>
             The panel below displays documentation for all endpoints,
             parameters, and error messages available to the Comedy Club API.
-            Deploy frames for individual endpoints to test how it works.
+            Deploy frames for individual endpoints to see how they work.
           </p>
         </article>
         <article className="right-pane" />
