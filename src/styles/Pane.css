@@ -1,6 +1,8 @@
 .pane {
   max-width: 1000px;
-  margin: auto;
+  margin: 1rem auto;
+  background: #e7f0f7;
+  font-size: 0.8rem;
 }
 
 .pane:hover {
@@ -12,13 +14,28 @@
 }
 
 .type {
-  width: 100px;
+  width: 50px;
   font-weight: 800;
+  padding: 0 1rem;
+  background: #0f6ab4;
+  text-align: center;
+  margin: 0;
+}
+
+.url {
+  margin: 0 0 0 1rem;
 }
 
 .returns {
-  margin-left: auto;
+  margin: 0 0 0 auto;
   font-style: italic;
+  padding-right: 1rem;
+}
+
+.type,
+.url,
+.returns {
+  line-height: 50px;
 }
 
 .secondary-label {
@@ -29,8 +46,10 @@
   transition: 0.3s;
   overflow: hidden;
   height: 0px;
+  display: grid;
+  padding-left: 1rem;
 }
 
 .secondary-pane.true {
-  height: 200px;
+  height: 166px;
 }
