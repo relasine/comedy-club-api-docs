@@ -44,7 +44,7 @@
 }
 
 .secondary-pane {
-  transition: 0.3s;
+  transition: 0.5s;
   overflow: hidden;
   height: 0px;
   display: grid;
